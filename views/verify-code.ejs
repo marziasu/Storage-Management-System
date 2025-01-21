@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Verification</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Display the error message if it exists -->
+    <% if (typeof error !== 'undefined' && error) { %>
+        <div style="color: red; background-color: #f8d7da; padding: 10px; border-radius: 5px;">
+            <%= error %> <!-- This is the error message from the backend -->
+        </div>
+    <% } %>
+ 
+    <div class"form-container">
+        <h1>Enter Verification Code</h1>
+        <% if (success) { %>
+            <p style="color: rgb(48, 139, 48);"><%= success %></p>
+        <% } %>        
+        <form action="/verify-code" method="post">
+            <input   name="resetToken" value="<%= resetToken %>" />
+            <h3>Enter the 6 digit code sent<br> to your e-mail</h3>
+            <div class="digit-field">
+                <input type="text" name="digit1" maxlength="1" class="digit-input" required />
+                <input type="text" name="digit2" maxlength="1" class="digit-input" required />
+                <input type="text" name="digit3" maxlength="1" class="digit-input" required />
+                <input type="text" name="digit4" maxlength="1" class="digit-input" required />
+                <input type="text" name="digit5" maxlength="1" class="digit-input" required />
+                <input type="text" name="digit6" maxlength="1" class="digit-input" required />
+            </div>
+            
+            <button type="submit" class="submit-btn">Verify</button>
+        </form>
+        <p style="color:grey">
+            Didn't get the code? 
+            <form action="/resend-code" method="POST">
+                <input type="hidden" name="resetToken" value="<%= resetToken %>" />
+                <button type="submit" class="resend-code">Resend Code</button>
+            </form>
+        </p>
+        <script>
+            // Auto-focus next input on keypress
+            const digitInputs = document.querySelectorAll('.digit-input');
+            digitInputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    if (e.target.value.length === 1 && index < digitInputs.length - 1) {
+                        digitInputs[index + 1].focus();
+                    }
+                });
+            });
+        </script>
+</body>
+</html>

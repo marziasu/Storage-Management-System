@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="plus-btn">+</button>
+        <div id="dropdown" class="hidden">
+            <button id="create-folder">Create Folder</button>
+            <button id="add-notes">Add Notes</button>
+        </div>
+    </div>
+     <!-- Folder Creation Modal -->
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Create New Folder</h3>
+      <input type="text" id="folder-name" placeholder="Untitled folder" />
+      <div class="modal-buttons">
+        <button id="cancel-btn">Cancel</button>
+        <button id="save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

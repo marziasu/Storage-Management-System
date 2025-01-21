@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: lighter;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 150px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(59, 59, 59);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: gray;
+}
+
+.forgot-password {
+    color: gray;
+    margin-bottom: 50px;
+    text-align: right;
+    align-self: flex-end;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+
+.link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: gray;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    cursor: pointer;
+
+}
+
+.fa-eye:hover {
+    color: #636262;
+}
+
+.resend-code {
+    color: green;
+    margin-bottom: 50px;
+    text-align: right;
+    align-self: flex-end;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+}
+
+.resend-code:hover {
+    text-decoration: none;
+}
+
+.digit-field input {
+    width: 40px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+}
+
+.container {
+    position: relative;
+}
+
+#plus-btn {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #dropdown {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+  }
+  
+  #dropdown button {
+    width: 150px;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #dropdown button:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .hidden {
+    display: none; /* Ensure the hidden class sets display to none */
+  }
+  /* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    text-align: center;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cancel-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  #save-btn {
+    background-color: #007bff;
+    color: white;
+  }
